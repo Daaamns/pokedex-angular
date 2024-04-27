@@ -1,0 +1,17 @@
+<div *ngIf="pokemonDetails | async as pokemonList" class="container">
+  <div
+    *ngFor="let pokemon of pokemonList"
+    class="card"
+    [ngClass]="pokemon.types[0].type.name | pokePipe"
+  >
+    <h3>
+      {{ pokemon.species.name }}
+    </h3>
+
+    <img
+      [src]="pokemon.sprites.other.dream_world.front_default"
+      [alt]="pokemon.species.name"
+    />
+    <!-- <img [src]="pokemon.types[0].type.url" alt="" /> -->
+  </div>
+</div>
