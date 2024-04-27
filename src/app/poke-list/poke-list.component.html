@@ -2,7 +2,7 @@
   <div
     *ngFor="let pokemon of pokemonList"
     class="card"
-    [ngClass]="pokemon.types[0].type.name | pokePipe"
+    [appPokeDirective]="pokemon.types[0].type.name"
   >
     <h3>
       {{ pokemon.species.name }}
@@ -12,6 +12,5 @@
       [src]="pokemon.sprites.other.dream_world.front_default"
       [alt]="pokemon.species.name"
     />
-    <!-- <img [src]="pokemon.types[0].type.url" alt="" /> -->
   </div>
 </div>

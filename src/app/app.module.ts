@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PokeListComponent } from './poke-list/poke-list.component';
 import { PokePipe } from './shared/poke.pipe';
+import { PokeDirectivec } from './shared/poke.directive';
 
 @NgModule({
-  declarations: [AppComponent, PokeListComponent, PokePipe],
+  declarations: [AppComponent, PokeListComponent, PokePipe, PokeDirectivec],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
